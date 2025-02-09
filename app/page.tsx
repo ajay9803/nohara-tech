@@ -3,7 +3,7 @@ import "../styles/styles.css";
 
 export default function Home() {
   return (
-    <div className="px-10 bg-gray-100 text-black font-roboto">
+    <div className="px-10 bg-gray-100 text-black font-roboto-300">
       <div className="w-full fixed px-14 py-6 bg-transparent top-0 left-0 flex flex-row justify-between items-center">
         <div className="flex flex-1 justify-start">
           <p className="tracking-wider font-normal"> Nohara Technologies</p>
@@ -41,10 +41,10 @@ export default function Home() {
           </div>
         </section>
         <SectionTwo/>
-        <section className="sub-section bg-blue-400 w-full flex justify-center items-center">
+        {/* <section className="sub-section bg-blue-400 w-full flex justify-center items-center">
           <p> Section 1</p>
           <p> Hello 1</p>
-        </section>
+        </section> */}
       </div>
     </div>
   );
