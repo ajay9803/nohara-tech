@@ -1,0 +1,3 @@
+export const HEADERTEXT = "NOHARA TECHNOLOGIES";
+export const HEADERTEXTONE = "BOOK A CALL";
+export const HEADERTEXTTWO = "LET'S CONNECT";
