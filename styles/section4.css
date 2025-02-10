@@ -1,0 +1,19 @@
+.step-count {
+  position: relative;
+  display: inline-block;
+}
+
+.step-count::before {
+  position: absolute;
+  content: "STEP";
+  color: black;
+  left: -10px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.step-count.active::before {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -3,10 +3,11 @@ import "../styles/styles.css";
 import SectionOne from "@/components/section1";
 import { HEADERTEXT, HEADERTEXTONE, HEADERTEXTTWO } from "@/constants/header";
 import SectionTwo from "@/components/section2";
+import SectionFour from "@/components/section4";
 
 export default function Home() {
   return (
-    <div className="px-20 text-black font-roboto bg-[#F3F4F1]">
+    <div className=" text-black font-roboto bg-[#F3F4F1]">
 
       {/* Header  */}
       <div className="w-full fixed px-20 py-6 bg-transparent top-0 left-0 flex flex-row justify-between items-center">
@@ -25,6 +26,7 @@ export default function Home() {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </div>
     </div>
   );

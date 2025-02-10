@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatedAsterick } from "./asterick";
+import { AnimatedAsterick, AnimatedKite, AnimatedWindow } from "./asterick";
 import "../styles/section2.css";
 
 const SectionTwo: React.FC = () => {
@@ -48,13 +48,13 @@ const SectionTwo: React.FC = () => {
     }, [inView]);
 
     return (
-        <section ref={sectionRef} className="sub-section bg-[#F3F4F1] w-full flex justify-start items-center gap-x-10 overflow-hidden">
+        <section ref={sectionRef} className="sub-section px-20 bg-[#F3F4F1] w-full flex justify-start items-center gap-x-10 overflow-hidden">
             <div className={`section2 flex items-center gap-x-10 ${inView ? "animate-slide" : ""}`}>
                 <AnimatedAsterick isActive={activeStep >= 1} />
                 <p className={`text-[250px] font-semibold text-slide ${activeStep >= 2 ? "active" : ""}`} data-text="We"> We </p>
-                <AnimatedAsterick isActive={activeStep >= 3} />
+                <AnimatedKite isActive={activeStep >= 3} />
                 <p className={`text-[250px] font-semibold text-slide ${activeStep >= 4 ? "active" : ""}`} data-text="are"> are</p>
-                <AnimatedAsterick isActive={activeStep >= 5} />
+                <AnimatedWindow isActive={activeStep >= 5} />
                 <p className={`text-[250px] font-semibold text-slide ${activeStep >= 6 ? "active" : ""}`} data-text="Best:"> Best:</p>
             </div>
         </section>

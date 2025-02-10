@@ -6,7 +6,7 @@ const SectionOne: React.FC = () => {
 
     const landingPageImageAddress: string = 'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/technology-circuit-pattern.jpg?alt=media&token=8c517e0d-dc70-46be-981e-9d27be272b4f';
 
-    return <section className="sub-section bg-[#F3F4F1] w-full flex flex-col justify-around pt-28">
+    return <section className="px-20 sub-section bg-[#F3F4F1] w-full flex flex-col justify-around pt-28">
         <div className="flex flex-row justify-between">
             <div className="flex flex-col w-3/5 mr-24 text-center">
                 <p className="text-7xl font-semibold tracking-wider"> We develop first</p>

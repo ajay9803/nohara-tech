@@ -51,7 +51,7 @@ const SectionThree: React.FC = () => {
   };
 
   return (
-    <section className="sub-section w-full flex justify-center items-center font-roboto bg-gray-100">
+    <section className="sub-section px-20 w-full flex justify-center items-center font-roboto bg-gray-100">
       <div className="w-full h-3/4 px-12">
         {sectionsData.map((section) => (
           <SectionItem
