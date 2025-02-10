@@ -6,10 +6,8 @@ import Section from "@/components/section";
 
 export default function Home() {
   return (
-    <div className="px-20 text-black font-roboto bg-[#F3F4F1]">
-
-      {/* Header  */}
-      <div className="w-full fixed px-20 py-6 bg-transparent top-0 left-0 flex flex-row justify-between items-center">
+    <div className="px-10 bg-gray-100 text-black font-roboto-300">
+      <div className="w-full fixed px-14 py-6 bg-transparent top-0 left-0 flex flex-row justify-between items-center">
         <div className="flex flex-1 justify-start">
           <p className="tracking-wider font-normal"> {HEADERTEXT} </p>
         </div>
@@ -22,9 +20,30 @@ export default function Home() {
         </div>
       </div>
       <div className="main-container w-full bg-white">
-        <SectionOne />
-        <SectionTwo />
-        <Section></Section>
+        <section className="sub-section bg-gray-100 w-full flex flex-col pt-28">
+          <div className="flex flex-row">
+            <div className="flex flex-col">
+              <p> We develop first</p>
+              <div className="flex items-center justify-around">
+                <svg viewBox="0 0 200 150" width="200" height="100">
+                  <path d="M 20 90 
+                    C 40 90, 50 80, 50 60 
+                    C 50 40, 60 30, 70 30 
+                    C 80 30, 90 40, 90 60 
+                    C 90 80, 100 90, 110 90 
+                    C 120 90, 130 90, 150 90
+                    M 150 90
+                    L 145 85
+                    M 150 90
+                    L 145 95" />
+                </svg>
+                <p> class softwares </p>
+                <div className="h-10 w-10 min-h-10 min-w-10 bg-orange-100 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <SectionTwo/>
       </div>
     </div>
   );

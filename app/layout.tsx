@@ -20,7 +20,7 @@ const pacifico = Pacifico({
 
 const roboto = Roboto({
   subsets: ["cyrillic"],
-  weight: ["100", "300"],
+  weight: ["100", "300", "700"],
   variable: "--font-roboto",
 });
 
