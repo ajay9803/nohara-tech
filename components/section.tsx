@@ -36,11 +36,11 @@ const Section: React.FC = () => {
     useEffect(() => {
         if (inView) {
             setTimeout(() => setActiveStep(1), 0);
-            setTimeout(() => setActiveStep(2), 667);
-            setTimeout(() => setActiveStep(3), 1334);
-            setTimeout(() => setActiveStep(4), 2001);
-            setTimeout(() => setActiveStep(5), 2668);
-            setTimeout(() => setActiveStep(6), 3335);
+            setTimeout(() => setActiveStep(2), 500);
+            setTimeout(() => setActiveStep(3), 1000);
+            setTimeout(() => setActiveStep(4), 1500);
+            setTimeout(() => setActiveStep(5), 2000);
+            setTimeout(() => setActiveStep(6), 2500);
         }
 
     }, [inView]);
