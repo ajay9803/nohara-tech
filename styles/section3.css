@@ -1,0 +1,11 @@
+.service-content {
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.service-content.active {
+    max-height: 400px;
+    padding: 10px 0px 10px 0px;
+}

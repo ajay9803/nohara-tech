@@ -1,4 +1,4 @@
-import "../styles/section.css";
+import "../styles/section3.css";
 
 const Asterick: React.FC = () => {
 
