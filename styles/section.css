@@ -8,13 +8,13 @@
 }
 
 .animate-slide {
-  animation: text-slide 4s forwards ease-in-out;
+  animation: text-slide 4s ease-in forwards;
 }
 
 .text-slide {
   position: relative;
   color: #dedede;
-  transition: color 0.7s ease-in-out;
+  transition: color 0.67s ease-in;
 }
 
 .text-slide.active {
@@ -28,7 +28,7 @@
   height: 100%;
   overflow: hidden;
   color: black;
-  transition: width 0.7s ease-in-out;
+  transition: width 0.67s ease-in;
 }
 
 .text-slide.active::before {
@@ -52,7 +52,7 @@
   background-color: black;
   transform: translatey(100%);
   transform-origin: left;
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.76s ease-in;
 }
 
 .asterick.active::before {
