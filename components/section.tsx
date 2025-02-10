@@ -1,15 +1,62 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import { AnimatedAsterick } from "./asterick";
+import "../styles/section.css";
 
 const Section: React.FC = () => {
-    return <section className="sub-section bg-[#F3F4F1] w-full flex justify-start items-center gap-x-10">
-        <AnimatedAsterick></AnimatedAsterick>
-        <p className="text-[250px] font-semibold text-[#DEDEDE]"> We </p>
-        <AnimatedAsterick></AnimatedAsterick>
-        <p className="text-[250px] font-semibold text-[#DEDEDE]"> are</p>
-        <AnimatedAsterick></AnimatedAsterick>
-        <p className="text-[250px] font-semibold text-[#DEDEDE]"> Best</p>
-    </section>
-}
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [inView, setInView] = useState(false);
+    const [activeStep, setActiveStep] = useState(0);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        setInView(true);
+                    }, 1000);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        const currentSectionRef = sectionRef.current;
+        if (currentSectionRef) {
+            observer.observe(currentSectionRef);
+        }
+
+        return () => {
+            if (currentSectionRef) {
+                observer.unobserve(currentSectionRef);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (inView) {
+            setTimeout(() => setActiveStep(1), 0);
+            setTimeout(() => setActiveStep(2), 667);
+            setTimeout(() => setActiveStep(3), 1334);
+            setTimeout(() => setActiveStep(4), 2001);
+            setTimeout(() => setActiveStep(5), 2668);
+            setTimeout(() => setActiveStep(6), 3335);
+        }
+
+    }, [inView]);
+
+    return (
+        <section ref={sectionRef} className="sub-section bg-[#F3F4F1] w-full flex justify-start items-center gap-x-10 overflow-hidden">
+            <div className={`section2 flex items-center gap-x-10 ${inView ? "animate-slide" : ""}`}>
+                <AnimatedAsterick isActive={activeStep >= 1} />
+                <p className={`text-[250px] font-semibold text-slide ${activeStep >= 2 ? "active" : ""}`} data-text="We"> We </p>
+                <AnimatedAsterick isActive={activeStep >= 3} />
+                <p className={`text-[250px] font-semibold text-slide ${activeStep >= 4 ? "active" : ""}`} data-text="are"> are</p>
+                <AnimatedAsterick isActive={activeStep >= 5} />
+                <p className={`text-[250px] font-semibold text-slide ${activeStep >= 6 ? "active" : ""}`} data-text="Best:"> Best:</p>
+            </div>
+        </section>
+    );
+};
 
 export default Section;
