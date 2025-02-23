@@ -15,7 +15,7 @@ const SectionFive: React.FC = () => {
         }, 200)
     }, [])
 
-    return <section  className={`flex flex-row pt-24  sub-section overflow-hidden gap-x-12 transition-transform duration-700 ease-in out ${isVisible ? "translate-y-0 opacity-100 ": "translate-y-20 opacity-0 "} `}>
+    return <section  className={`flex flex-row pt-24  sub-section overflow-hidden gap-x-12 transition-transform duration-700 ease-in-out ${isVisible ? "translate-y-0 opacity-100 ": "translate-y-20 opacity-0 "} `}>
         <div className="MAIN DIV bg-[#d3d6e1] w-full h-full rounded-t-5xl px-20 py-10 flex flex-row gap-x-full" style={{borderTopRightRadius: "8%", borderTopLeftRadius:"8%", }}>
             <div className=" w-1/2">
             <div className="flex flex-col gap-y-80 " style={{columnGap: "full"}}>
