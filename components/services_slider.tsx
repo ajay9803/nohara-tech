@@ -28,7 +28,7 @@ const ServicesSlider = () => {
     }, []);
 
     return (
-        <div id="services-slider" className="relative w-full overflow-hidden flex">
+        <div id="services-slider" className="relative w-full overflow-hidden flex z-[50]">
             <div ref={sliderRef} className="slider flex gap-0 text-gray-500 font-semibold tracking-wider animate-scroll">
                 {services
                     .map((subServices, index) => (
