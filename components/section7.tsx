@@ -1,78 +1,71 @@
 import Image from "next/image";
 
 const SectionSeven: React.FC = () => {
-    const landingPageImageAddress: string = 'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/technology-circuit-pattern.jpg?alt=media&token=8c517e0d-dc70-46be-981e-9d27be272b4f';
 
-    return <section  className="flex flex-row pt-24  sub-section overflow-hidden gap-x-12 ">
-        <div className="MAIN DIV bg-[#f3f4f1] w-full h-full flex flex-col gap-y-10  border-black pl-20  py-10 flex flex-row gap-x-full" style={{borderTopWidth:"1px"}}>
-            <div className="w-full flex flex-row pr-20">
-                <p className="flex-[20]">/WE ARE UWWA/</p>
-                <p className="flex-[40] text-2xl font-bold" >Team</p>
-                <p className="flex-[40]">A full-cycle product design studio from Europe, made of colleagues turned friends who genuinely enjoy working together</p>
+    return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto px-10 lg:px-20 bg-white">
+        <div className="bg-white w-full h-full flex flex-col gap-y-10  border-black gap-x-full" style={{ borderTopWidth: "1px" }}>
+            <div className="w-full flex flex-col lg:flex-row justify-between pt-3 gap-y-4">
+                <p className="md:flex-[20]">/ WE ARE NOHARAs /</p>
+                <p className="md:flex-[40] text-2xl font-bold" >Team</p>
+                <p className="md:flex-[40] hidden lg:block text-end">A full-cycled IT Company from Asia, made of colleagues turned friends who genuinely enjoy working together</p>
             </div>
-            <div className="w-4/5 flex flex-row ml-auto gap-x-16">
-                <div >
-                    <div  style={{width:"100%"}} className="flex flex-col gap-y-4" >
-                    <div className="bg-[#d9d6e4] " style={{borderRadius:"5% ", height:"300px"}}>
-                    <Image  src={landingPageImageAddress} alt="Diagram"
-                    unoptimized={true}
-                    height={50}
-                    width={50}
-                    quality={100}
-                    style={{ width: '100%', height: '100%', borderRadius:"10%", }}
-                    className="px-10 py-8"
-                    ></Image>
+            <div className="w-full lg:w-4/5 grid grid-cols-2 lg:grid-cols-3 ml-auto gap-x-5 lg:gap-x-16">
+                <div style={{ width: "100%" }} className="flex flex-col gap-y-4">
+                    <div className="bg-[#D9D6E4] flex flex-col justify-center items-center rounded-3xl" style={{ height: "300px" }}>
+                        <div className="h-[80%] w-[80%] bg-transparent flex justify-center items-center">
+                            <Image
+                                src={'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/user-photos%2Fsagar.jpg?alt=media&token=a6329b29-e9b9-442f-90e0-0f1fa81c13d2'}
+                                alt="Diagram"
+                                unoptimized={true}
+                                height={50}
+                                width={50}
+                                quality={100}
+                                className=" object-cover rounded-3xl"
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
                     </div>
-                    <p className="font-bold">Collaborations</p>
-                    <p className="text-xs leading-5">We have access to best design talent worldwide. Based on your project goal, we strengthen our team witth top-notch UX designers, researchers or web designers</p>
-                    </div>
-                     
+                    <p className="text-normal font-normal tracking-wider"> Chief Executive Officer </p>
                 </div>
 
-                <div >
-                    <div  style={{width:"100%"}} className="flex flex-col gap-y-4" >
-                    <div className="bg-[#dee0d2] " style={{borderRadius:"5% ", height:"300px"}}>
-                    <Image  src={landingPageImageAddress} alt="Diagram"
-                    unoptimized={true}
-                    height={50}
-                    width={50}
-                    quality={100}
-                    style={{ width: '100%', height: '100%', borderRadius:"10%", }}
-                    className="px-10 py-8"
-                    ></Image>
+                <div style={{ width: "100%" }} className="flex flex-col gap-y-4">
+                    <div className="bg-[#DEE0D2] flex flex-col justify-center items-center rounded-3xl" style={{ height: "300px" }}>
+                        <div className="h-[80%] w-[80%] bg-transparent flex justify-center items-center">
+                            <Image
+                                src={'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/user-photos%2FIMG-20211029-WA0012.png?alt=media&token=00573cc8-00d5-4a57-93a5-a9ff4c51a99f'}
+                                alt="Diagram"
+                                unoptimized={true}
+                                height={50}
+                                width={50}
+                                quality={100}
+                                className=" object-cover rounded-3xl"
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
                     </div>
-                    <p className="font-bold">Collaborations</p>
-                    <p className="text-xs leading-5">We have access to best design talent worldwide. Based on your project goal, we strengthen our team witth top-notch UX designers, researchers or web designers</p>
-                    </div>
-                    <div className="flex flex mt-10">
-                        <button className="bg-black text-white py-3 px-4 rounded-full" style={{fontSize:"14px"}}>LinkedIn</button>
-                    </div>
-                     
+                    <p className="text-normal font-normal tracking-wider"> Senior Software Engineer </p>
                 </div>
 
-                <div >
-                    <div  style={{width:"100%"}} className="flex flex-col gap-y-4" >
-                    <div className="bg-[#e0d2d3] " style={{borderRadius:"5% ", height:"300px"}}>
-                    <Image  src={landingPageImageAddress} alt="Diagram"
-                    unoptimized={true}
-                    height={50}
-                    width={50}
-                    quality={100}
-                    style={{ width: '100%', height: '100%', borderRadius:"10%", }}
-                    className="px-10 py-8"
-                    ></Image>
+                <div style={{ width: "100%" }} className="flex flex-col gap-y-4">
+                    <div className="bg-[#E0D1D2] flex flex-col justify-center items-center rounded-3xl" style={{ height: "300px" }}>
+                        <div className="h-[80%] w-[80%] bg-transparent flex justify-center items-center">
+                            <Image
+                                src={'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/user-photos%2Fmanav.png?alt=media&token=beacd15c-3f3d-4179-8e2e-48da8bb06701'}
+                                alt="Diagram"
+                                unoptimized={true}
+                                height={50}
+                                width={50}
+                                quality={100}
+                                className=" object-cover rounded-3xl"
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
                     </div>
-                    <p className="font-bold">Collaborations</p>
-                    <p className="text-xs leading-5">We have access to best design talent worldwide. Based on your project goal, we strengthen our team witth top-notch UX designers, researchers or web designers</p>
-                    </div>
-                    <div className="flex flex mt-10">
-                        <button className="bg-black text-white py-3 px-4 rounded-l-full" style={{fontSize:"14px"}}>Website</button>
-                        <button className="bg-black text-white py-3 px-4 rounded-r-full border-white" style={{fontSize:"14px", borderWidth:"1px"}}>LinkedIn</button>
-                    </div>
+                    <p className="text-normal font-normal tracking-wider"> Frontend Developer </p>
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 }
 
 export default SectionSeven;

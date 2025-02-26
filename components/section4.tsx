@@ -42,21 +42,21 @@ const SectionFour: React.FC = () => {
     }, [inView]);
 
     return (
-        <section ref={sectionRef} className="flex flex-row pt-24 pb-3 sub-section px-20 bg-[#F3F4F1] overflow-hidden gap-x-12">
-            <p className="text-gray-400 text-sm w-[15%]">/ HOW IT WORKS /</p>
-            <div className="w-[85%] flex flex-col gap-y-5">
-                <div className="flex flex-row gap-x-28">
-                    <p className="w-[35%] font-semibold tracking-wider">
+        <section ref={sectionRef} className="flex px-8 flex-col md:flex-row pt-28 pb-3 sub-section lg:px-20 bg-[#F3F4F1] overflow-hidden gap-x-12 h-full">
+            <p className="text-gray-400 text-sm w-full pb-5 md:w-[15%]">/ HOW IT WORKS /</p>
+            <div className="w-full lg:w-[85%] flex flex-col gap-y-5 flex-1">
+                <div className="flex flex-row gap-x-7 lg:gap-x-28 justify-between">
+                    <p className="w-full md:w-[35%] font-semibold tracking-wider">
                         Crafting Growth Through SaaS with Nohara Technologies
                     </p>
-                    <p className="w-1/2 text-sm text-gray-500 tracking-wider">
+                    <p className="w-1/2 text-sm text-gray-500 tracking-wider hidden md:block">
                         Elevate your journey with Nohara Technologies: Craft, Enhance, Extend. Tailored solutions, from idea to execution, for businesses seeking intuitive experiences and growth. Choose Nohara Technologies to transform your business vision into reality.
                     </p>
                 </div>
                 <div className="w-full flex flex-col items-start flex-1 pt-6">
                     <div className="flex flex-row items-center w-full gap-x-10">
-                        <p className="text-3xl font-semibold w-1/3">Make your idea ALIVE</p>
-                        <div className="flex flex-col w-2/3 justify-between gap-y-5 h-full py-2">
+                        <p className="text-3xl font-semibold w-1/3 hidden md:block">Make your idea ALIVE</p>
+                        <div className="flex flex-col w-full md:w-2/3 justify-between gap-y-5 h-full py-2">
                             <div className="h-5 w-full rounded-2xl bg-[#E8E6E2] relative">
                                 <div
                                     style={{ width: `${currentStep * 20}%` }}
@@ -81,16 +81,16 @@ const SectionFour: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <p>PROGRESS {currentStep * 20}%</p>
+                                <p className="hidden md:block">PROGRESS {currentStep * 20}%</p>
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1 flex-row bg-[#E8E6E2] w-full h-full rounded-2xl mt-5 relative px-5 py-5 overflow-hidden">
-                        <div className="w-1/2 rounded-2xl flex flex-col">
-                            <p>We craft intuitive and tailored software experiences that people love. From your idea to a complete product.</p>
+                    <div className="flex-1 flex-col md:flex-row bg-[#E8E6E2] w-full gap-x-5 h-full rounded-2xl mt-5 relative px-5 py-5 overflow-hidden">
+                        <div className="md:w-1/2 rounded-2xl flex flex-col pr-0 md:pr-5 pb-5 md:pb-0">
+                            <p className="text-center">We craft intuitive and tailored software experiences that people love. From your idea to a complete product.</p>
                         </div>
 
-                        <div className="w-1/2 h-full absolute top-0 right-0">
+                        <div className="w-full md:w-1/2 h-full absolute md:top-0 md:right-0">
                             {[1, 2, 3, 4, 5].map((step) => (
                                 <Image
                                     key={step}

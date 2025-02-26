@@ -1,0 +1,111 @@
+/* Scroll animation for text */
+.text-1-watcher {
+  position: absolute;
+  left: 64px;
+  animation: text-1-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes text-1-watcher {
+  to {
+    left: 30%;
+  }
+}
+
+.text-2-watcher {
+  position: absolute;
+  right: 0px;
+  animation: text-2-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes text-2-watcher {
+  to {
+    right: 30%;
+  }
+}
+
+.text-3-watcher {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translateX(50%);
+  animation: text-3-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes text-3-watcher {
+  to {
+    bottom: 90px;
+  }
+}
+
+/* Image animation */
+.main-image {
+  width: 100%;
+  height: 0;
+  object-fit: cover;
+  animation: image-expand-shrink 2.5s ease forwards;
+  transform-origin: top center; /* Expand from the top */
+  position: absolute;
+  top: 0;
+}
+
+@keyframes image-expand-shrink {
+  0% {
+    height: 0;
+    width: 100%;
+  }
+  50% {
+    height: 100%;
+    width: 100%;
+    top: 0%;
+  }
+  100% {
+    height: 80%;
+    width: 40%;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+/* Text animation with change in fontfamily */
+.text-1-0 {
+  animation: switch 3s forwards;
+}
+
+@keyframes switch {
+  0% {
+    font-family: var(--font-play);
+  }
+  10% {
+    font-family: var(--font-roboto);
+  }
+  20% {
+    font-family: var(--font-play);
+  }
+  30% {
+    font-family: var(--font-roboto);
+  }
+  40% {
+    font-family: var(--font-play);
+  }
+  50% {
+    font-family: var(--font-roboto);
+  }
+  60% {
+    font-family: var(--font-play);
+  }
+  70% {
+    font-family: var(--font-roboto);
+  }
+  80% {
+    font-family: var(--font-play);
+  }
+  90% {
+    font-family: var(--font-roboto);
+  }
+  100% {
+    font-family: var(--font-geist-mono);
+  }
+}

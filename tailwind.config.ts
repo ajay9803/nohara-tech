@@ -15,8 +15,10 @@ export default {
       fontFamily: {
         roboto: ["var(--font-roboto)"],
         pacifico: ["var(--font-pacifico)"],
-        londrina: ["var(--font-londrina)"]
-      }, 
+        londrina: ["var(--font-londrina)"],
+        pressStart2P: ["var(--font-press-start)"],
+        play: ["var(--font-play)"]
+      },
     },
   },
   plugins: [],

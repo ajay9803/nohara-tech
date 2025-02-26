@@ -2,6 +2,7 @@
 
 import '../styles/section3.css';
 import React, { useState } from "react";
+import ServiceCard from './pages/home/service-card';
 
 interface SectionItemProps {
   id: string;
@@ -25,7 +26,7 @@ const SectionItem: React.FC<SectionItemProps> = ({ id, title, info, isOpen, togg
           <p className="font-semibold">{title}</p>
 
           {/* Content that expands */}
-          <div className={`service-content ${isOpen ? 'active': ''}`}>
+          <div className={`service-content ${isOpen ? 'active' : ''}`}>
             <p className="text-sm text-gray-600">{info}</p>
           </div>
         </div>
@@ -51,8 +52,8 @@ const SectionThree: React.FC = () => {
   };
 
   return (
-    <section className="sub-section px-20 w-full flex justify-center items-center font-roboto bg-gray-100">
-      <div className="w-full h-3/4 px-12">
+    <section className="sub-section px-8 lg:px-20 w-full flex justify-center items-center font-roboto bg-gray-100 pt-28">
+      <div className="w-full h-full hidden lg:block">
         {sectionsData.map((section) => (
           <SectionItem
             key={section.id}
@@ -60,6 +61,11 @@ const SectionThree: React.FC = () => {
             isOpen={openId === section.id}
             toggleOpen={toggleOpen}
           />
+        ))}
+      </div>
+      <div className="w-full h-full grid grid-cols-2 lg:hidden">
+        {sectionsData.map((section) => (
+          <ServiceCard key={section.id} title={section.title} desc={section.info} imageUrl='' />
         ))}
       </div>
     </section>
