@@ -15,7 +15,7 @@ const services: string[][] = [
     ["SaaS", "Platforms"]
 ];
 
-const ServicesSlider: React.FC<{ reverse: boolean }> = (props) => {
+const ServicesSlider: React.FC<{ reverse: boolean }> = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

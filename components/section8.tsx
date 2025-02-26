@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimatedText from "./pages/home/hello";
+import { HelloText } from "./pages/home/hello";
 
 const SectionEight: React.FC = () => {
     return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto w-full text-white">
@@ -22,7 +22,7 @@ const SectionEight: React.FC = () => {
                     </button>
                     <div className="text-right hidden lg:block">
                         <p className="text-start">Tell us about your project.</p>
-                        <p className="text-start">Let's make some magic.</p>
+                        <p className="text-start">Let&apos;s make some magic.</p>
                         {/* <Button variant="outline" className="mt-2">Get In Touch</Button> */}
                     </div>
                 </div>
@@ -42,7 +42,7 @@ const SectionEight: React.FC = () => {
             </div>
 
             <div className="flex-grow flex items-center justify-start lg:flex-1 text-white">
-                <AnimatedText text='Say Hello!' css="text-4xl lg:text-8xl"></AnimatedText>
+                <HelloText text='Say Hello!' css="text-4xl lg:text-8xl"></HelloText>
             </div>
 
             <div className="flex lg:hidden justify-between gap-6">

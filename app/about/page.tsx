@@ -10,8 +10,8 @@ const AboutPage: React.FC = () => {
     const imageRef = useRef<HTMLImageElement>(null);
     const [isImageInView, setIsImageInView] = useState<boolean>(false);
     const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
-    const [startTextAnimation, setStartTextAnimation] = useState<boolean>(false);
-    const [startYourTextAnimation, setStartYourTextAnimation] = useState<boolean>(false);
+    // const [startTextAnimation, setStartTextAnimation] = useState<boolean>(false);
+    // const [startYourTextAnimation, setStartYourTextAnimation] = useState<boolean>(false);
 
     const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
     const [isImageHovered, setIsImageHovered] = useState<boolean>(false);
@@ -38,13 +38,13 @@ const AboutPage: React.FC = () => {
                 if (entry.isIntersecting && isImageLoaded) {
                     setIsImageInView(true);
 
-                    setTimeout(() => {
-                        setStartTextAnimation(true);
-                    }, 2000);
+                    // setTimeout(() => {
+                    //     setStartTextAnimation(true);
+                    // }, 2000);
 
-                    setTimeout(() => {
-                        setStartYourTextAnimation(true);
-                    }, 2500);
+                    // setTimeout(() => {
+                    //     setStartYourTextAnimation(true);
+                    // }, 2500);
                 }
             },
             { threshold: 0.2 }
@@ -60,7 +60,7 @@ const AboutPage: React.FC = () => {
                 observer.unobserve(currentSectionRef);
             }
         };
-    }, [isImageLoaded]);
+    }, [isImageLoaded, isImageHovered, selectedImageIndex]);
 
     const handleImageLoad = () => {
         setIsImageLoaded(true);

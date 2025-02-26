@@ -70,7 +70,7 @@ const AnimatedText: React.FC<{ text: string; css: string, duration: number }> = 
 
         // Start animation for the first character
         animateCharacter(0);
-    }, [isVisible, text]);
+    }, [isVisible, text, duration]);
 
     return (
         <h1 ref={ref} className={css}>
@@ -88,3 +88,59 @@ const AnimatedText: React.FC<{ text: string; css: string, duration: number }> = 
 };
 
 export default AnimatedText;
+
+export const HelloText: React.FC<{ text: string, css: string }> = ({ text, css }) => {
+    const [fontClasses, setFontClasses] = useState(Array(text.length).fill("font-light"));
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const node = ref.current;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsVisible(true);
+            },
+            { threshold: 0.5 }
+        );
+
+        if (node) observer.observe(node);
+
+        return () => {
+            if (node) observer.unobserve(node);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        const animationCounts = text.split("").map((_, index) => index + 5);
+
+        text.split("").forEach((_, index) => {
+            let count = 0;
+            const interval = setInterval(() => {
+                setFontClasses((prev) => {
+                    const newFonts = [...prev];
+                    newFonts[index] = fonts[Math.floor(Math.random() * fonts.length)];
+                    return newFonts;
+                });
+                count++;
+                if (count >= animationCounts[index]) {
+                    clearInterval(interval);
+                    setFontClasses((prev) => {
+                        const newFonts = [...prev];
+                        newFonts[index] = fonts[Math.floor(Math.random() * fonts.length)];
+                        return newFonts;
+                    });
+                }
+            }, Math.floor(Math.random() * (150 - 80 + 1)) + 80);
+        });
+    }, [isVisible, text]);
+
+    return (
+        <h1 ref={ref} className={css}>
+            {text.split("").map((char: string, index: number) => (
+                <span key={index} className={fontClasses[index]}>{char}</span>
+            ))}
+        </h1>
+    );
+}
