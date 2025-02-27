@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      cursor: {
+        'ns-resize': 'ns-resize',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

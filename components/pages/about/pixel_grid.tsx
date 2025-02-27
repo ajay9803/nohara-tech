@@ -22,7 +22,7 @@ const PixelGrid = () => {
         <div
             className="h-40 w-20 grid bg-black rounded-t-full overflow-hidden"
             style={{
-                gridTemplateColumns: `repeat(${columns}, 1fr)`, 
+                gridTemplateColumns: `repeat(${columns}, 1fr)`,
                 gridTemplateRows: `repeat(${rows}, 1fr)`,
             }}
         >

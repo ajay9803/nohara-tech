@@ -70,9 +70,9 @@ const AboutPage: React.FC = () => {
         "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/technology-circuit-pattern.jpg?alt=media&token=8c517e0d-dc70-46be-981e-9d27be272b4f";
 
     return (
-        <div className="flex flex-col bg-white pt-28 font-roboto text-black px-8">
+        <div className="flex flex-col bg-white pt-28 font-roboto text-black px-20">
             <div className="h-screen flex flex-col items-start relative border-black w-full">
-                <div className="h-full w-[60%] flex flex-col tracking-wider gap-y-3">
+                <div className="h-full w-[60%] flex flex-col pt-20 tracking-wider gap-y-3">
                     <p className="text-6xl"> Find Your </p>
                     <p className="text-6xl">Fascinating, Unleashing</p>
                     <p className="text-6xl">stories to push brands forward</p>
@@ -121,7 +121,7 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-screen"></div>    
+            <div className="h-screen"></div>
         </div>
     );
 };
