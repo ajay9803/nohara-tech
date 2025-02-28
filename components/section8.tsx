@@ -3,7 +3,7 @@ import { HelloText } from "./pages/home/hello";
 
 const SectionEight: React.FC = () => {
     return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto w-full text-white min-h-screen">
-        <div className="bg-[#06d610] w-full flex-1 flex flex-col gap-y-5 px-8 lg:px-20 py-10">
+        <div className="bg-[#7D2734] w-full flex-1 flex flex-col gap-y-5 px-8 lg:px-20 py-10">
             <div className="flex justify-between items-start">
                 <h1 className="text-xl font-roboto tracking-wide font-semibold w-1/2 lg:w-1/3"> Nohara Technologies </h1>
                 <div className="w-1/2 lg:w-2/3 flex items-start justify-end gap-x-20">
