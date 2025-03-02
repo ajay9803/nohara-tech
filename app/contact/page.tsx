@@ -1,7 +1,6 @@
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
-import { faTimesSquare } from "@fortawesome/free-solid-svg-icons/faTimesSquare";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocation, faMessage, faPhone, } from '@fortawesome/free-solid-svg-icons'
 
 const ContactForm: React.FC = () => {
     return (
@@ -10,36 +9,36 @@ const ContactForm: React.FC = () => {
             <div className="w-full lg:w-1/3 bg-white text-black py-8 flex flex-col justify-start gap-8 sticky top-28 lg:h-screen">
                 <div className="flex flex-col gap-8 w-full">
                     <p className="tracking-wider"> Nohara Technologies </p>
-                    <div className="flex flex-col md:grid md:grid-cols-3 lg:flex lg:flex-col gap-8 w-fulg">
+                    <div className="flex flex-col md:grid md:grid-cols-3 lg:flex lg:flex-col gap-8 w-full">
                         <div className="flex flex-row gap-x-3 items-start">
-                            <div className="h-6 w-6 border border-gray-200 rounded-sm flex items-center justify-center">
-                                <FontAwesomeIcon icon={faMessage} className="text-xl" />
+                            <div className="min-h-7 min-w-7 border border-gray-500 rounded-md flex items-center justify-center">
+                                <FontAwesomeIcon icon={faMessage} className="fa-fw bg-transparent text-sm text-red-600 block" />
                             </div>
                             <div className="flex flex-col gap-y-0.5 tracking-wider">
                                 <p className="font-bold">Chat to us</p>
                                 <p className="text-sm pb-1">Our friendly team is here to help.</p>
-                                <p className="font-semibold text-sm">noharatech.com</p>
+                                <p className="font-semibold text-sm hover:underline hover:text-[#3851e5]"> noharatechnologies@gmail.com </p>
                             </div>
                         </div>
                         <div className="flex flex-row gap-x-3 items-start">
-                            <div className="h-6 w-6 border border-gray-200 rounded-sm flex items-center justify-center">
-                                <FontAwesomeIcon className="text-black text-2xl" icon={faTimesSquare} />
+                            <div className="min-h-7 min-w-7 border border-gray-500 rounded-md flex items-center justify-center">
+                                <FontAwesomeIcon icon={faLocation} className="fa-fw bg-transparent text-sm" />
                             </div>
                             <div className="flex flex-col gap-y-0.5 tracking-wider">
                                 <p className="font-bold">Visit us</p>
                                 <p className="text-sm pb-1">Come say hello at our office HQ.</p>
-                                <p className="font-semibold text-sm">Kamalpokhari, Kathmandu</p>
+                                <p className="font-semibold text-sm hover:underline hover:text-[#3851e5]">Kamalpokhari, Kathmandu</p>
                             </div>
                         </div>
                         <div className="flex flex-row gap-x-3 items-start">
-                            <div className="h-6 w-6 border border-gray-200 rounded-sm flex items-center justify-center">
-                                <FontAwesomeIcon className="text-black text-2xl" icon={faTimesSquare} />
+                            <div className="min-h-7 min-w-7 border border-gray-500 rounded-md flex items-center justify-center">
+                                <FontAwesomeIcon icon={faPhone} className="fa-fw bg-transparent text-sm" />
                             </div>
                             <div className="flex flex-col gap-y-0.5 tracking-wider">
                                 <p className="font-bold">Call us</p>
                                 <p className="text-sm pb-1">Mon to Fri from 8AM to 5PM.</p>
-                                <p className="font-semibold text-sm">+977 9818261855</p>
-                                <p className="font-semibold text-sm">+1 343 558 6962</p>
+                                <p className="font-semibold text-sm hover:underline hover:text-[#3851e5]">+977 9818261855</p>
+                                <p className="font-semibold text-sm hover:underline hover:text-[#3851e5]">+1 343 558 6962</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +46,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-full lg:w-2/3 bg-[#BAFE66] py-12 px-6 lg:px-12 flex flex-col justify-center rounded-md lg:rounded-2xl">
+            <div className="w-full lg:w-2/3 bg-[#D2FF72] border-2 border-solid border-[#BAFE66] py-12 px-6 lg:px-12 flex flex-col justify-center rounded-md lg:rounded-2xl">
                 <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-wider">
                     Got ideas? We’ve got the skills. Let’s team up.
                 </h1>

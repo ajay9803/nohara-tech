@@ -9,7 +9,7 @@ const ServiceCard: React.FC<{ title: string, desc: string, imageUrl: string }> =
         </div>
         <Image  src={props.imageUrl}
             height={500}
-            width={500}
+            width={500} 
             alt={`${props.title} - Image`}
             quality={100}
             unoptimized={true}

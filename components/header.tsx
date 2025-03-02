@@ -41,25 +41,25 @@ const Header: React.FC = () => {
 
                 <div className={`${!menuOpen ? 'h-12 w-12' : 'h-[90vh] w-[88vw] md:w-96 bg-[#3851e5]'} overflow-hidden absolute top-0 right-0 transition-all duration-500`}>
                     <div
-                        className={`absolute top-0 left-0 flex w-2 h-2 border-t-2 border-l-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-slate-600 group-hover:translate-y-1 group-hover:translate-x-1"}`
+                        className={`sm:scale-75 absolute top-0 left-0 flex w-2 h-2 border-t-2 border-l-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-slate-600 group-hover:translate-y-1 group-hover:translate-x-1"}`
                         }
                     ></div>
 
                     {/* Top-Right Corner */}
                     <div
-                        className={`absolute top-0 right-0 flex w-2 h-2 border-t-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 -translate-x-2 border-white" : "group-hover:border-red-600 group-hover:translate-y-1 group-hover:-translate-x-1 "}`
+                        className={`sm:scale-75 absolute top-0 right-0 flex w-2 h-2 border-t-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 -translate-x-2 border-white" : "group-hover:border-red-600 group-hover:translate-y-1 group-hover:-translate-x-1 "}`
                         }
                     ></div>
 
                     {/* Bottom-Left Corner */}
                     <div
-                        className={`absolute bottom-0 left-0 flex w-2 h-2 border-b-2 border-l-2 border-black duration-600 transition-[transform] duration-1000    ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-blue-600 group-hover:-translate-y-1 group-hover:translate-x-1"}`
+                        className={`sm:scale-75 absolute bottom-0 left-0 flex w-2 h-2 border-b-2 border-l-2 border-black duration-600 transition-[transform] duration-1000    ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-blue-600 group-hover:-translate-y-1 group-hover:translate-x-1"}`
                         }
                     ></div>
 
                     {/* Bottom-Right Corner */}
                     <div
-                        className={`absolute bottom-0 right-0 flex  w-2 h-2 border-b-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-yellow-600 group-hover:-translate-y-1 group-hover:-translate-x-1"}`
+                        className={`sm:scale-75 absolute bottom-0 right-0 flex  w-2 h-2 border-b-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-yellow-600 group-hover:-translate-y-1 group-hover:-translate-x-1"}`
                         }
                     ></div>
                     {menuOpen && (
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
                                     className="cursor-pointer tracking-wider hover:text-gray-300 flex items-start pl-4 gap-x-6 text-3xl py-4"
                                     style={{ borderBottomWidth: "1px", borderColor: "white" }}
                                 >
-                                    <span>05 </span>Contact
+                                    <span>05 </span>Contact Us
                                 </button>
                             </div>
                             <button
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
                         </div>
                     )}
                 </div>
-                <div className={`absolute top-1/2 right-0 -translate-y-1/2`}>
+                <div className={`absolute top-1/2 right-0 -translate-y-1/2 sm:scale-75`}>
                     <button
                         className="h-12 w-12 flex items-center justify-center"
                         onClick={() => setMenuOpen(!menuOpen)}

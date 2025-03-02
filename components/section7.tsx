@@ -20,13 +20,14 @@ const teamMembers = [
         role: "Software Engineer",
         imageUrl:
             "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/user-photos%2Fmanav.png?alt=media&token=beacd15c-3f3d-4179-8e2e-48da8bb06701",
-        desc: 'With a passion for coding and problem-solving, Manav is a highly skilled full-stack developer who specializes in cloud computing, system architecture, and scalable application development. His ability to design and implement robust, secure, and efficient software solutions makes him an integral part of the Nohara Technologies team. From crafting intuitive user experiences to optimizing backend performance, he ensures that every product is built with excellence.'
-    },
+            desc: 'With a passion for coding and problem-solving, Manav is a highly skilled full-stack developer who specializes in cloud computing, system architecture, and scalable application development. His ability to design and implement robust, secure, and efficient software solutions makes him an integral part of the Nohara Technologies team. From crafting intuitive user experiences to optimizing backend performance, he ensures that every product is built with excellence.'
+        },
+        
 ];
 
 const SectionSeven: React.FC = () => {
     return (
-        <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto px-10 lg:px-20 bg-white">
+        <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto px-10 lg:px-20 bg-white pb-10">
             <div className="bg-white w-full h-full flex flex-col gap-y-10 border-black" style={{ borderTopWidth: "1px" }}>
                 <div className="w-full flex flex-col lg:flex-row justify-between pt-3 gap-y-4">
                     <p className="md:flex-[20]">/ WE ARE NOHARAs /</p>

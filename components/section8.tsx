@@ -53,13 +53,13 @@ const SectionEight: React.FC = () => {
 
             {/* Footer */}
             <div className="flex justify-between items-end">
-                <p>© Nohara Technologies 2025</p>
+                <p className="text-xs md:text-sm">© Nohara Technologies 2025</p>
                 <div className="gap-6 hidden lg:flex">
                     <Link className="hover:underline" href={''}>Facebook</Link>
                     <Link className="hover:underline" href={'https://www.instagram.com/nohara_technologies/'}>Instagram</Link>
                     <Link className="hover:underline" href={''}>LinkedIn</Link>
                 </div>
-                <p>Privacy Policy</p>
+                <p className="text-xs md:text-sm">Privacy Policy</p>
             </div>
 
             {/* Scroll Up Button */}

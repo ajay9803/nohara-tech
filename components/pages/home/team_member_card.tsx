@@ -16,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, imageUrl, desc }) =
     const [showDetails, setShowDetails] = useState<boolean>(false);
     return (
         <div className="flex flex-col gap-y-2 relative">
-            <div className="h-[40vh] w-[40vh] bg-transparent flex justify-center items-center relative overflow-hidden">
+            <div className="min-h-52 h-[40vh] w-full bg-transparent flex justify-center items-center relative overflow-hidden">
                 <Image
                     src={imageUrl}
                     alt={name}
@@ -24,10 +24,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, imageUrl, desc }) =
                     height={50}
                     width={50}
                     quality={100}
-                    className="object-cover border-2 border-solid border-black"
+                    className="min-h-52 object-cover border-2 border-solid border-black"
                     style={{ width: "40vh", height: "40vh" }}
                 />
-                <div className={`scrollbar-hide hover:cursor-ns-resize overflow-y-scroll flex flex-col p-4 h-[40vh] w-[40vh] bg-[#F9E864] border-2 border-solid border-black absolute bottom-0 right-0 ${showDetails ? '-translate-y-0' : 'translate-y-full'} transition-all duration-1000`}>
+                <div className={`scrollbar-hide hover:cursor-ns-resize overflow-y-scroll flex flex-col p-4 min-h-52 h-[40vh] w-full bg-[#F9E864] border-2 border-solid border-black absolute bottom-0 right-0 ${showDetails ? '-translate-y-0' : 'translate-y-full'} transition-all duration-1000`}>
                     <p className="text-sm tracking-wider">
                         {desc}
                     </p>
