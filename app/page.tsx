@@ -4,11 +4,13 @@ import SectionThree from "@/components/section3";
 import "../styles/styles.css";
 import SectionOne from "@/components/section1";
 import { HEADERTEXT, HEADERTEXTONE } from "@/constants/header";
+
 import SectionTwo from "@/components/section2";
 import SectionFour from "@/components/section4";
 import SectionFive from "@/components/section5";
-import SectionSix from "@/components/section6";
+
 import SectionSeven from "@/components/section7";
+import SectionEight from "@/components/section8";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -119,10 +121,11 @@ export default function Home() {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
-        <SectionFive />
-        <SectionSix />
+        {/* <SectionFive /> */}
+        {/* <SectionSix /> */}
         <SectionSeven />
+        <SectionEight/>
       </div>
-    </div>
+      </div>
   );
 }

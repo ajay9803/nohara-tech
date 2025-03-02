@@ -1,0 +1,9 @@
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 0.2px white;
+}
+
+.text-filled {
+  color: black;
+  -webkit-text-stroke: 0;
+}

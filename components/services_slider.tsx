@@ -15,7 +15,7 @@ const services: string[][] = [
     ["SaaS", "Platforms"]
 ];
 
-const ServicesSlider = () => {
+const ServicesSlider: React.FC<{ reverse: boolean }> = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const ServicesSlider = () => {
                             {subServices.map((service: string, idx: number) => (
                                 <div
                                     key={idx}
-                                    className={`flex items-center justify-center w-32 px-7 py-2 ${idx === 0 ? "bg-black text-white" : "bg-white text-black"
+                                    className={`flex items-center justify-center w-32 px-7 py-2 ${idx === 0 ? "bg-[black] text-white" : "bg-white text-black"
                                         }`}
                                 >
                                     <p className="tracking-wider text-[13px] text-center">{service}</p>
