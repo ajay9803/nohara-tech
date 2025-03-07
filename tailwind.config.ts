@@ -20,7 +20,8 @@ export default {
         pacifico: ["var(--font-pacifico)"],
         londrina: ["var(--font-londrina)"],
         pressStart2P: ["var(--font-press-start)"],
-        play: ["var(--font-play)"]
+        play: ["var(--font-play)"],
+        opensans: ["var(--font-open-sans)"]
       },
     },
   },

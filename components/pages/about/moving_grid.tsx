@@ -75,7 +75,6 @@ const MovingGrid: React.FC = () => {
                             width={500}
                             alt="Image of Pottery"
                             quality={100}
-                            unoptimized
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                         <Image
@@ -86,7 +85,6 @@ const MovingGrid: React.FC = () => {
                             width={500}
                             alt="Image of Pottery"
                             quality={100}
-                            unoptimized
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                     </div>
@@ -99,7 +97,6 @@ const MovingGrid: React.FC = () => {
                             width={500}
                             alt="Image of Pottery"
                             quality={100}
-                            unoptimized
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                     </div>
@@ -113,12 +110,11 @@ const MovingGrid: React.FC = () => {
                             width={500}
                             alt="Image of Pottery"
                             quality={100}
-                            unoptimized
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                     </div>
                     <div className={`rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl flex-1 flex relative overflow-hidden transition-all duration-500 bg-yellow-500 ease-in 
-                        ${gridState === 0 ? 'h-[100%]' : gridState === 1 ? 'h-[100%]' : 'delay-500 h-[140%]'}`}>
+                        ${gridState === 0 ? 'h-[100%]' : gridState === 1 ? 'h-[100%]' : 'delay-500 md:h-[140%]'}`}>
                         <Image
                             className="rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl transition-all ease-in duration-500"
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FWarmth%20and%20Laughter%20at%20a%20Coffee%20Gathering.jpeg?alt=media&token=c4aa53e1-842f-4946-8a04-2213ae6caf2b"
@@ -126,14 +122,13 @@ const MovingGrid: React.FC = () => {
                             width={500}
                             alt="Image of Pottery"
                             quality={100}
-                            unoptimized
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                     </div>
                 </div>
             </div>
             <div className="flex flex-row pt-3 w-full">
-                <div className="flex flex-col w-[60%] md:w-[45%] pt-8 gap-y-3 mr-10">
+                <div className="flex flex-col w-[100%] md:w-[35%] pt-8 gap-y-3 mr-10">
                     <p ref={textRef} className="opacity-0">
                         &quot;We enjoy working and hanging out together because our shared values center around communication, responsibility, and sharing cameos of our pets on Instagram chat.&quot;
                     </p>
@@ -141,7 +136,7 @@ const MovingGrid: React.FC = () => {
                         Bijina Maharjan - Quality Assurance Lead at Nohara Technologies
                     </p>
                 </div>
-                <div className={`h-36 hidden md:block ${gridState === 0 ? 'w-[55%]' : gridState === 1 ? 'w-1/3' : 'w-[25.7%]'} bg-[#EB5951] transition-all duration-500 ease-in rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl`}></div>
+                <div className={`h-36 hidden md:block ${gridState === 0 ? 'w-[65%]' : gridState === 1 ? 'w-[50%]' : 'w-[32%]'} bg-[#EB5951] transition-all duration-500 ease-in rounded-tl-3xl rounded-tr-md rounded-bl-md rounded-br-3xl`}></div>
             </div>
         </div>
     );

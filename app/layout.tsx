@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Londrina_Shadow, Pacifico, Roboto, Press_Start_2P, Play } from "next/font/google";
+import { Geist, Geist_Mono, Londrina_Shadow, Pacifico, Roboto, Press_Start_2P, Play, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import Head from "next/head";
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  weight: ['300', '600'],
+  subsets: ["latin"],
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,22 +65,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
-        <meta name="description" content="We develop first class softwares." />
-        <title>Nohara Technologies</title>
-      </Head>
-
-      <html lang="en" className="h-full">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pacifico.variable} ${londrina.variable} ${pressStart2P.variable} ${play.variable} relative`}
-        >
-          <Header />
-          {children}
-        </body>
-      </html>
-    </>
+    <html lang="en" className="h-full">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pacifico.variable} ${londrina.variable} ${pressStart2P.variable} ${play.variable} ${openSans.variable} relative`}
+      >
+        <Header />
+        {children}
+      </body>
+    </html>
   );
 }

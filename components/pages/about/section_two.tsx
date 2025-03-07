@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SectionTwo: React.FC = () => {
     const containerRef = useRef(null);
-    const firstTextRef = useRef(null);
+    const firstTextRef = useRef<HTMLParagraphElement | null>(null);
     const secondTextRef = useRef(null);
     const thirdTextRef = useRef(null);
 
@@ -17,15 +17,17 @@ const SectionTwo: React.FC = () => {
             defaults: { duration: 0.8, ease: "power3.out" },
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 80%",
+                start: "top 50%",
                 toggleActions: "play none none none",
             },
         });
 
-        tl.from(firstTextRef.current, { y: 50, opacity: 0 })
-            .from(secondTextRef.current, { y: 50, opacity: 0 }, "+=0.1")
-            .from(thirdTextRef.current, { y: 50, opacity: 0 }, "+=0.1");
+        tl.from(firstTextRef.current, { y: 50, opacity: 0, color: 'red' })
+            .from(secondTextRef.current, { y: 50, opacity: 0 }, "-=0.7") 
+            .from(thirdTextRef.current, { y: 50, opacity: 0 }, "-=0.6"); 
+
     }, []);
+
 
     return (
         <div ref={containerRef} className="md:h-96 mx-4 bg-[#1D1D1D] rounded-3xl p-4 py-8 md:p-20 text-white flex flex-col md:flex-row justify-between gap-y-4 gap-x-8 tracking-wider">
