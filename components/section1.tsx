@@ -11,7 +11,7 @@ const SectionOne: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between">
             <div className="flex flex-col w-full md:w-3/5 mr-8 lg:mr-24 text-center">
                 <div className="inline-block w-full">
-                    <p className="text-3xl md:text-4xl lg:text-7xl font-semibold tracking-wider"> We develop first</p>
+                    <p className="text-3xl md:text-4xl lg:text-7xl font-[300] tracking-wider"> We develop first</p>
                 </div>
                 <div className="flex items-center justify-between md:justify-around pr-5 w-full">
                     <svg viewBox="0 0 200 150">
@@ -31,7 +31,7 @@ const SectionOne: React.FC = () => {
                 </div>
             </div>
             <div className="flex-col justify-between w-2/5 uppercase text-xs hidden md:flex">
-                <p> <span className="text-[#000814] font-semibold tracking-100">NOHARA TECHNOLOGIES</span> is a software development company specializing in cutting-edge solutions. We help businesses innovate, scale, and achieve their goals through technology. </p>
+                <p> <span className="text-[#000814] font-[600] tracking-100">NOHARA TECHNOLOGIES</span> is a software development company specializing in cutting-edge solutions. We help businesses innovate, scale, and achieve their goals through technology. </p>
                 <p> Explore Works</p>
             </div>
         </div>
