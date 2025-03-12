@@ -2,8 +2,8 @@ import Link from "next/link";
 import { HelloText } from "./pages/home/hello";
 
 const SectionEight: React.FC = () => {
-    return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto w-full text-white min-h-screen">
-        <div className="bg-[#7D2734] w-full flex-1 flex flex-col gap-y-5 px-8 lg:px-20 py-10">
+    return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto w-full text-black min-h-screen">
+        <div className="bg-[#F9E864] w-full flex-1 flex flex-col gap-y-5 px-8 lg:px-20 py-10">
             <div className="flex justify-between items-start">
                 <h1 className="text-xl font-roboto tracking-wide font-semibold w-1/2 lg:w-1/3"> Nohara Technologies </h1>
                 <div className="w-1/2 lg:w-2/3 flex items-start justify-end gap-x-20">
@@ -42,7 +42,7 @@ const SectionEight: React.FC = () => {
             </div>
 
             <div className="flex-grow flex items-center justify-start lg:flex-1 text-white">
-                <HelloText text='Say Hello!' css="text-4xl lg:text-8xl"></HelloText>
+                <HelloText text='Say Hello!' css="text-4xl text-black lg:text-8xl"></HelloText>
             </div>
 
             <div className="flex lg:hidden justify-between gap-6">
@@ -53,13 +53,13 @@ const SectionEight: React.FC = () => {
 
             {/* Footer */}
             <div className="flex justify-between items-end">
-                <p>© Nohara Technologies 2025</p>
+                <p className="text-xs md:text-sm">© Nohara Technologies 2025</p>
                 <div className="gap-6 hidden lg:flex">
                     <Link className="hover:underline" href={''}>Facebook</Link>
                     <Link className="hover:underline" href={'https://www.instagram.com/nohara_technologies/'}>Instagram</Link>
                     <Link className="hover:underline" href={''}>LinkedIn</Link>
                 </div>
-                <p>Privacy Policy</p>
+                <p className="text-xs md:text-sm">Privacy Policy</p>
             </div>
 
             {/* Scroll Up Button */}

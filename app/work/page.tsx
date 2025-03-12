@@ -8,6 +8,11 @@ import { useState } from 'react';
 import "../../styles/pages/work/styles.css";
 import { IProject } from '@/interfaces/iproject';
 
+import {
+    faMagnifyingGlass,
+    faCircleStop
+} from "@fortawesome/free-solid-svg-icons";
+
 const WorkPage: React.FC = () => {
 
     const [coverUp, setCoverUp] = useState<boolean>(false);
@@ -65,13 +70,20 @@ const WorkPage: React.FC = () => {
             </div>
 
             <div className='hidden md:block fixed bottom-0 right-0'>
-                <FontAwesomeIcon onClick={() => {
+                <FontAwesomeIcon
+                    style={{ color: "orange" }}
+                    icon={faMagnifyingGlass}
+                    size='2x'
+                    className='text-5xl text-red-500'
+                />
+                
+                {/* <FontAwesomeIcon onClick={() => {
                     if (coverUp) { 
                         setCoverUp(false);
                     } else {
                         setCoverUp(true);
                     }
-                }} className='hover:cursor-pointer text-3xl text-black' icon={faEye} color='red'></FontAwesomeIcon>
+                }} className='hover:cursor-pointer text-3xl text-black' icon={faEye}></FontAwesomeIcon> */}
             </div>
             <div className="gap-y-8 md:gap-y-0 flex flex-col md:flex-row  items-center w-full max-h-screen   pt-10">
                 {projects.map((project: IProject, index: number) => (

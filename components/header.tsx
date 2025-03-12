@@ -39,31 +39,31 @@ const Header: React.FC = () => {
                     <span className="relative tracking-widest">{HEADERTEXTONE}</span>
                 </button>
 
-                <div className={`${!menuOpen ? 'h-12 w-12' : 'h-[90vh] w-[88vw] md:w-96 bg-[#3851e5]'} overflow-hidden absolute top-0 right-0 transition-all duration-500`}>
+                <div className={`${!menuOpen ? 'h-12 w-12' : 'h-[90vh] w-[88vw] md:w-96 bg-[#4e4d4d]'} overflow-hidden absolute top-0 right-0 transition-all duration-500`}>
                     <div
-                        className={`absolute top-0 left-0 flex w-2 h-2 border-t-2 border-l-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-slate-600 group-hover:translate-y-1 group-hover:translate-x-1"}`
+                        className={`sm:scale-75 absolute top-0 left-0 flex w-2 h-2 border-t-2 border-l-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-slate-600 group-hover:translate-y-1 group-hover:translate-x-1"}`
                         }
                     ></div>
 
                     {/* Top-Right Corner */}
                     <div
-                        className={`absolute top-0 right-0 flex w-2 h-2 border-t-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 -translate-x-2 border-white" : "group-hover:border-red-600 group-hover:translate-y-1 group-hover:-translate-x-1 "}`
+                        className={`sm:scale-75 absolute top-0 right-0 flex w-2 h-2 border-t-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 -translate-x-2 border-white" : "group-hover:border-red-600 group-hover:translate-y-1 group-hover:-translate-x-1 "}`
                         }
                     ></div>
 
                     {/* Bottom-Left Corner */}
                     <div
-                        className={`absolute bottom-0 left-0 flex w-2 h-2 border-b-2 border-l-2 border-black duration-600 transition-[transform] duration-1000    ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-blue-600 group-hover:-translate-y-1 group-hover:translate-x-1"}`
+                        className={`sm:scale-75 absolute bottom-0 left-0 flex w-2 h-2 border-b-2 border-l-2 border-black duration-600 transition-[transform] duration-1000    ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-blue-600 group-hover:-translate-y-1 group-hover:translate-x-1"}`
                         }
                     ></div>
 
                     {/* Bottom-Right Corner */}
                     <div
-                        className={`absolute bottom-0 right-0 flex  w-2 h-2 border-b-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-yellow-600 group-hover:-translate-y-1 group-hover:-translate-x-1"}`
+                        className={`sm:scale-75 absolute bottom-0 right-0 flex  w-2 h-2 border-b-2 border-r-2 border-black duration-600 transition-[transform] duration-1000  ${menuOpen ? "translate-y-2 translate-x-2 border-white" : "group-hover:border-yellow-600 group-hover:-translate-y-1 group-hover:-translate-x-1"}`
                         }
                     ></div>
                     {menuOpen && (
-                        <div className="px-4 w-full h-full flex flex-col items-start pt-16 opacity-100 transition-opacity duration-700 pointer-events-auto">
+                        <div className="px-4 tracking-wider font-opensans w-full h-full flex flex-col items-start pt-16 opacity-100 transition-opacity duration-700 pointer-events-auto">
                             <div className="text-white flex flex-col text-lg font-normal w-full pb-4">
                                 <button
                                     onClick={() => {
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
                                     className="cursor-pointer tracking-wider hover:text-gray-300 flex items-start pl-4 gap-x-6 text-3xl py-4"
                                     style={{ borderBottomWidth: "1px", borderColor: "white" }}
                                 >
-                                    <span>05 </span>Contact
+                                    <span>05 </span>Contact Us
                                 </button>
                             </div>
                             <button
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
                                 }}
                                 className="relative py-4 w-full text-lg text-white border border-white hover:text-black"
                                 style={{
-                                    background: "linear-gradient(to right, white 50%, #3851e5 50%)",
+                                    background: "linear-gradient(to right, white 50%, #4e4d4d 50%)",
                                     backgroundSize: "200% 100%",
                                     backgroundPosition: "100% 0",
                                     transition: "background-position 0.7s ease-out",
@@ -130,12 +130,12 @@ const Header: React.FC = () => {
                                 onMouseEnter={(e) => (e.currentTarget.style.backgroundPosition = "0% 0")}
                                 onMouseLeave={(e) => (e.currentTarget.style.backgroundPosition = "100% 0")}
                             >
-                                <span className="relative transition-colors duration-500">Start a Project</span>
+                                <span className="relative transition-colors duration-500 font-bold font-opensans">Start a Project</span>
                             </button>
                         </div>
                     )}
                 </div>
-                <div className={`absolute top-1/2 right-0 -translate-y-1/2`}>
+                <div className={`absolute top-1/2 right-0 -translate-y-1/2 sm:scale-75`}>
                     <button
                         className="h-12 w-12 flex items-center justify-center"
                         onClick={() => setMenuOpen(!menuOpen)}

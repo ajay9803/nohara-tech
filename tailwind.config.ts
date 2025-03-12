@@ -21,8 +21,7 @@ export default {
         londrina: ["var(--font-londrina)"],
         pressStart2P: ["var(--font-press-start)"],
         play: ["var(--font-play)"],
-        open_sans: ["var(--open-sans)"]
-        
+        opensans: ["var(--font-open-sans)"]
       },
     },
   },
