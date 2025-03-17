@@ -8,7 +8,8 @@ import { HEADERTEXT, HEADERTEXTONE } from "@/constants/header";
 import SectionTwo from "@/components/section2";
 import SectionFour from "@/components/section4";
 import SectionFive from "@/components/section5";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SectionSeven from "@/components/section7";
 import SectionEight from "@/components/section8";
 
@@ -16,6 +17,8 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <>
+    <ToastContainer/>
     <div className="text-black font-roboto bg-[#F3F4F1]">
       {/* Header */}
       <div className="w-full fixed px-20 py-6 bg-transparent top-0 left-0 flex flex-row justify-between items-center">
@@ -127,5 +130,6 @@ export default function Home() {
         <SectionEight/>
       </div>
       </div>
+      </>
   );
 }

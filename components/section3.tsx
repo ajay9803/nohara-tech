@@ -15,17 +15,14 @@ interface SectionItemProps {
 const SectionItem: React.FC<SectionItemProps> = ({ id, title, info, isOpen, toggleOpen }) => {
   return (
     <div
-      className="border-b py-4 cursor-pointer border-gray-400 transition-all duration-1000 ease-in-out"
+      className="border-b py-3 cursor-pointer border-gray-400 transition-all duration-1000 ease-in-out"
       onClick={() => toggleOpen(id)}
     >
-      {/* Row for ID, Symbol, and Title */}
       <div className="flex items-start">
         <p className={`flex-[20] transition-all duration-100 ease-in ${isOpen ? 'text-black font-semibold' : 'text-gray-500'}`}>{`${isOpen ? '/' : ''} ${id} ${isOpen ? '/' : ''}`}</p>
         <p className={` ${isOpen ? 'text-black font-semibold' : 'text-gray-500'} flex-[20] transition-all duration-150 ease-in`}>{isOpen ? "(-)" : "(+)"}</p>
         <div className="flex-[60] pl-20 flex flex-col gap-y-2">
           <p className="font-semibold">{title}</p>
-
-          {/* Content that expands */}
           <div className={`service-content ${isOpen ? 'active' : ''}`}>
             <p className="text-sm text-gray-600">{info}</p>
           </div>
@@ -82,7 +79,7 @@ const SectionThree: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleOpen = (id: string) => {
-    setOpenId(id);
+    setOpenId((prevId) => (prevId === id ? null : id));
   };
 
   return (
