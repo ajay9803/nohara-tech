@@ -3,14 +3,12 @@
 import ProjectCard from '@/components/pages/work/project';
 import '../../styles/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import "../../styles/pages/work/styles.css";
 import { IProject } from '@/interfaces/iproject';
 
 import {
-    faMagnifyingGlass,
-    faCircleStop
+    faEye,
 } from "@fortawesome/free-solid-svg-icons";
 
 const WorkPage: React.FC = () => {
@@ -42,6 +40,7 @@ const WorkPage: React.FC = () => {
             images: ['https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/projects%2FMessenger_creation_5715374651904368.jpeg?alt=media&token=7145d8e8-db35-4b8d-a8d3-8b600a182532'],
         },
     ];
+
     return (
         <div className={`scrollbar-hide px-8 md:px-0 md:h-screen w-full pt-20 flex items-center font-play md:overflow-x-auto md:overflow-y-hidden flex-nowrap ${coverUp ? 'bg-[#3973A6]' : 'bg-transparent'}`}>
             <div className={`mr-10 min-w-[80vw] h-[60vh] hidden md:flex flex-row text-7xl justify-center items-center tracking-widest font-bold ${coverUp ? 'text-outline border border-solid border-white' : 'text-filled'}`}>
@@ -67,20 +66,20 @@ const WorkPage: React.FC = () => {
             </div>
 
             <div className='hidden md:block fixed bottom-0 right-0'>
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                     style={{ color: "orange" }}
                     icon={faMagnifyingGlass}
                     size='2x'
                     className='text-5xl text-red-500'
-                />
-                
-                {/* <FontAwesomeIcon onClick={() => {
+                /> */}
+
+                <FontAwesomeIcon onClick={() => {
                     if (coverUp) { 
                         setCoverUp(false);
                     } else {
                         setCoverUp(true);
                     }
-                }} className='hover:cursor-pointer text-3xl text-black' icon={faEye}></FontAwesomeIcon> */}
+                }} className='hover:cursor-pointer text-3xl text-black' icon={faEye}></FontAwesomeIcon>
             </div>
             <div className="gap-y-8 md:gap-y-0 flex flex-col md:flex-row items-center w-full min-h-screen pt-10">
                 {projects.map((project: IProject, index: number) => (

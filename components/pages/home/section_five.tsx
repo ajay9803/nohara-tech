@@ -1,4 +1,4 @@
-import TeamMember from "./pages/home/team_member_card";
+import TeamMember from "./team_member_card";
 
 const teamMembers = [
     {
@@ -25,7 +25,7 @@ const teamMembers = [
         
 ];
 
-const SectionSeven: React.FC = () => {
+const SectionFive: React.FC = () => {
     return (
         <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto px-10 lg:px-20 bg-white pb-10">
             <div className="bg-white w-full h-full flex flex-col gap-y-10 border-black" style={{ borderTopWidth: "1px" }}>
@@ -47,4 +47,4 @@ const SectionSeven: React.FC = () => {
     );
 };
 
-export default SectionSeven;
+export default SectionFive;

@@ -87,22 +87,13 @@ const Header: React.FC = () => {
                                 </button>
                                 <button
                                     onClick={() => {
-
-                                    }}
-                                    className="cursor-pointer tracking-wider hover:text-gray-300 flex items-start pl-4 gap-x-6 text-3xl py-4"
-                                    style={{ borderBottomWidth: "1px", borderColor: "white" }}
-                                >
-                                    <span>03 </span>Services
-                                </button>
-                                <button
-                                    onClick={() => {
                                         router.push('/work');
                                         setMenuOpen(false);
                                     }}
                                     className="cursor-pointer tracking-wider hover:text-gray-300 flex items-start pl-4 gap-x-6 text-3xl py-4"
                                     style={{ borderBottomWidth: "1px", borderColor: "white" }}
                                 >
-                                    <span>04 </span>Our Projects
+                                    <span>03 </span>Our Projects
                                 </button>
                                 <button
                                     onClick={() => {
@@ -112,7 +103,7 @@ const Header: React.FC = () => {
                                     className="cursor-pointer tracking-wider hover:text-gray-300 flex items-start pl-4 gap-x-6 text-3xl py-4"
                                     style={{ borderBottomWidth: "1px", borderColor: "white" }}
                                 >
-                                    <span>05 </span>Contact Us
+                                    <span>04 </span>Contact Us
                                 </button>
                             </div>
                             <button

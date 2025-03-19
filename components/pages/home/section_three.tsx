@@ -1,8 +1,8 @@
 "use client";
 
-import '../styles/section3.css';
+import '../../../styles/section3.css';
 import React, { useState } from "react";
-import ServiceCard from './pages/home/service-card';
+import ServiceCard from './service_card';
 
 interface SectionItemProps {
   id: string;

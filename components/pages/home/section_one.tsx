@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Asterick from "./asterick";
-import ServicesSlider from "./services_slider";
-import "../styles/pages/home/text.css"
+import "../../../styles/pages/home/text.css"
+import Asterick from "@/components/asterick";
+import ServicesSlider from "@/components/services_slider";
 
 const SectionOne: React.FC = () => {
 
@@ -41,7 +41,6 @@ const SectionOne: React.FC = () => {
             width={500}
             alt="Image of Pottery"
             quality={100}
-            unoptimized={true}
             style={{ width: '100%', height: '300px', objectFit: 'cover' }}
         ></Image>
         <div className="flex flex-col items-start md:flex-row md:items-center gap-y-5 justify-between pt-8">

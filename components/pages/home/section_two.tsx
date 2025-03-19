@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatedAsterick, AnimatedKite, AnimatedWindow } from "./asterick";
-import "../styles/section2.css";
+import { AnimatedAsterick, AnimatedKite, AnimatedWindow } from "../../asterick";
+import "../../../styles/section2.css";
 
 const SectionTwo: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { HelloText } from "./pages/home/hello";
+import { HelloText } from "./hello";
 
-const SectionEight: React.FC = () => {
-    return <section className="flex flex-row pt-24 sub-section overflow-hidden gap-x-12 font-roboto w-full text-black min-h-screen">
+const SectionSix: React.FC = () => {
+    return <section className="flex flex-row sub-section overflow-hidden gap-x-12 font-roboto w-full text-black min-h-screen">
         <div className="bg-[#F9E864] w-full flex-1 flex flex-col gap-y-5 px-8 lg:px-20 py-10">
             <div className="flex justify-between items-start">
                 <h1 className="text-xl font-roboto tracking-wide font-semibold w-1/2 lg:w-1/3"> Nohara Technologies </h1>
@@ -69,4 +69,4 @@ const SectionEight: React.FC = () => {
     </section>
 }
 
-export default SectionEight;
+export default SectionSix;

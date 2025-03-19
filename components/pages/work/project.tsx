@@ -32,9 +32,9 @@ const ProjectCard: React.FC<{ coverUp: boolean, project: IProject }> = ({ coverU
                 src={project.images[0]}
                 height={500}
                 width={500}
-                alt="Image of Pottery"
+                alt={project.name}
                 quality={100}
-                unoptimized={true}
+                unoptimized={false}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
 

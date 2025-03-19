@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MovingGrid from "@/components/pages/about/moving_grid";
 import SectionTwo from "@/components/pages/about/section_two";
 import SectionThree from "@/components/pages/about/section_three";
+import SectionSix from "@/components/pages/home/section_six";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,12 +33,13 @@ const AboutUsPage: React.FC = () => {
 
     return (
         <div className="min-h-screen w-full flex flex-col pt-28 font-opensans">
-            <p ref={textRef} className="text-center text-4xl md:text-7xl tracking-wider opacity-0">
+            <p ref={textRef} className="text-center font-openSans text-4xl md:text-7xl tracking-wider opacity-0">
                 meet the nohara-mates
             </p>
             <MovingGrid />
             <SectionTwo />
             <SectionThree />
+            <SectionSix />
         </div>
     );
 };
