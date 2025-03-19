@@ -39,7 +39,7 @@ const SectionOne: React.FC = () => {
         <Image className="rounded-2xl" src={landingPageImageAddress}
             height={500}
             width={500}
-            alt="Image of Pottery"
+            alt="Tech - Nohara Technologies"
             quality={100}
             style={{ width: '100%', height: '300px', objectFit: 'cover' }}
         ></Image>
@@ -62,7 +62,7 @@ const SectionOne: React.FC = () => {
                         placeholder="Enter email"
                         className="border p-2 rounded-l-md w-full focus:outline-none"
                     />
-                    <button className="bg-gray-300 px-4 py-2 rounded-r-md">
+                    <button className="bg-gray-300 px-4 py-2 rounded-r-md hover:bg-black hover:text-white transition-all duration-700 ease-in">
                         Subscribe
                     </button>
                 </div>

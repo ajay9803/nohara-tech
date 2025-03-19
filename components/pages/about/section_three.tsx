@@ -15,7 +15,7 @@ const SectionThree: React.FC = () => {
                         src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2Fimage-removebg-preview.png?alt=media&token=4b5296b0-88c7-4563-a272-3027e7b55c80"
                         height={200}
                         width={200}
-                        alt="Image of Pottery"
+                        alt="CEO - Nohara Technologies"
                         quality={100}
                         style={{ objectFit: "cover" }}
                     />
@@ -28,7 +28,7 @@ const SectionThree: React.FC = () => {
                         src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2Fimage-removebg-preview%20(2).png?alt=media&token=dde200e9-2cd6-45fe-b13a-21619c22ca8f"
                         height={200}
                         width={200}
-                        alt="Image of Pottery"
+                        alt="Project Manager - Nohara Technologies"
                         quality={100}
                         style={{ objectFit: "cover" }}
                     />
@@ -43,7 +43,7 @@ const SectionThree: React.FC = () => {
                         src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2Fimage-removebg-preview%20(3).png?alt=media&token=7fb6554d-be80-4f96-b0c5-0ff5e6794e82"
                         height={200}
                         width={200}
-                        alt="Image of Pottery"
+                        alt="Senior Developer - Nohara Technologies"
                         quality={100}
                         style={{ objectFit: "cover" }}
                     />
@@ -56,7 +56,7 @@ const SectionThree: React.FC = () => {
                         src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2Fimage-removebg-preview%20(1).png?alt=media&token=19c1aa8b-4efb-4637-ad78-08d66e55f60e"
                         height={200}
                         width={200}
-                        alt="Image of Pottery"
+                        alt="QA Lead - Nohara Technologies"
                         quality={100}
                         style={{ objectFit: "cover" }}
                     />

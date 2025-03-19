@@ -73,7 +73,7 @@ const MovingGrid: React.FC = () => {
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FProfessional%20Team%20Brainstorming%20Session.jpeg?alt=media&token=4ae1244a-522d-4c23-9784-35120237c20e"
                             height={500}
                             width={500}
-                            alt="Image of Pottery"
+                            alt="Nohara Technologies"
                             quality={100}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
@@ -83,7 +83,7 @@ const MovingGrid: React.FC = () => {
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FProfessional%20Meeting.jpeg?alt=media&token=39eec6f5-9637-4e40-81f1-d23fe0e18612"
                             height={500}
                             width={500}
-                            alt="Image of Pottery"
+                            alt="Nohara Technologies"
                             quality={100}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
@@ -95,7 +95,7 @@ const MovingGrid: React.FC = () => {
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FCollaborative%20Work%20Setting%20in%20Black%20and%20White.jpeg?alt=media&token=502e2040-ef79-44d5-bd2b-090c55250321"
                             height={500}
                             width={500}
-                            alt="Image of Pottery"
+                            alt="Nohara Technologies"
                             quality={100}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
@@ -108,7 +108,7 @@ const MovingGrid: React.FC = () => {
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FCollaborative%20Analysis.jpeg?alt=media&token=a4157eab-58de-47a8-ad22-c6fde64313f7"
                             height={500}
                             width={500}
-                            alt="Image of Pottery"
+                            alt="Nohara Technologies"
                             quality={100}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
@@ -120,7 +120,7 @@ const MovingGrid: React.FC = () => {
                             src="https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/about-us%2FWarmth%20and%20Laughter%20at%20a%20Coffee%20Gathering.jpeg?alt=media&token=c4aa53e1-842f-4946-8a04-2213ae6caf2b"
                             height={500}
                             width={500}
-                            alt="Image of Pottery"
+                            alt="Nohara Technologies"
                             quality={100}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
