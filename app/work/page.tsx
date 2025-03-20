@@ -2,14 +2,9 @@
 
 import ProjectCard from '@/components/pages/work/project';
 import '../../styles/styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import "../../styles/pages/work/styles.css";
 import { IProject } from '@/interfaces/iproject';
-
-import {
-    faEye,
-} from "@fortawesome/free-solid-svg-icons";
 
 const WorkPage: React.FC = () => {
 
@@ -43,7 +38,7 @@ const WorkPage: React.FC = () => {
 
     return (
         <div className={`scrollbar-hide px-8 md:px-0 md:h-screen w-full pt-20 flex items-center font-play md:overflow-x-auto md:overflow-y-hidden flex-nowrap ${coverUp ? 'bg-[#3973A6]' : 'bg-transparent'}`}>
-            <div className={`mr-10 min-w-[80vw] h-[60vh] hidden md:flex flex-row text-7xl justify-center items-center tracking-widest font-bold ${coverUp ? 'text-outline border border-solid border-white' : 'text-filled'}`}>
+            <div id='work-container' className={`mr-10 min-w-[80vw] h-[60vh] hidden md:flex flex-row text-7xl justify-center items-center tracking-widest font-bold ${coverUp ? 'text-outline border border-solid border-white' : 'text-filled'}`}>
                 <div className={`${coverUp ? 'visible' : 'invisible'} h-full w-20 border border-solid border-white overflow-hidden relative`}>
                     <div className='h-[100vh] w-40 flex flex-col justify-between absolute -top-10 -left-9'>
                         {Array.from({ length: 70 }).map((_, index) => (
@@ -51,7 +46,7 @@ const WorkPage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-1 flex-col gap-y-5 px-1'>
+                <div className='work-container flex flex-1 flex-col gap-y-5 px-1'>
                     <p> Creatures of Culture. </p>
                     <p> Masters of Digital. </p>
                     <p> Futuristic DNA. </p>
@@ -65,22 +60,21 @@ const WorkPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className='hidden md:block fixed bottom-0 right-0'>
-                {/* <FontAwesomeIcon
-                    style={{ color: "orange" }}
-                    icon={faMagnifyingGlass}
-                    size='2x'
-                    className='text-5xl text-red-500'
-                /> */}
-
-                <FontAwesomeIcon onClick={() => {
-                    if (coverUp) { 
-                        setCoverUp(false);
-                    } else {
-                        setCoverUp(true);
-                    }
-                }} className='hover:cursor-pointer text-3xl text-black' icon={faEye}></FontAwesomeIcon>
+            <div className='hidden md:block fixed bottom-10 right-5 z-40'>
+                <i style={{ fontSize: '40px' }} onClick={() => {
+                    setCoverUp(!coverUp);
+                    document.getElementById("work-container")?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "start"
+                    });
+                }} className="fa fa-eye text-black hover:cursor-pointer"></i>
             </div>
+
+            {/* <div className="hidden md:inline fixed bottom 10 right-52 z-40">
+                <p>&lt;&lt;</p>
+                <p>&gt;&gt;</p>
+            </div>    */}
             <div className="gap-y-8 md:gap-y-0 flex flex-col md:flex-row items-center w-full min-h-screen pt-10">
                 {projects.map((project: IProject, index: number) => (
                     <ProjectCard key={index} coverUp={coverUp} project={project} />

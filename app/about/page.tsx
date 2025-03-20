@@ -33,7 +33,7 @@ const AboutUsPage: React.FC = () => {
 
     return (
         <div className="min-h-screen w-full flex flex-col pt-28 font-opensans">
-            <p ref={textRef} className="text-center font-openSans text-4xl md:text-7xl tracking-wider opacity-0">
+            <p ref={textRef} className="text-center font-openSans text-4xl md:text-7xl tracking-wider opacity-0 px-8">
                 meet the nohara-mates
             </p>
             <MovingGrid />

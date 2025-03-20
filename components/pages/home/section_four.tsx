@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const SectionFour: React.FC = () => {
     const imageUrls = [
-        "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fstep1.png?alt=media&token=a72aceb9-1de9-4bbb-86f3-769fd9b406c9",
-        "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fsteep%202%20project%20planning.png?alt=media&token=7c50ee28-bfb1-4533-9da3-9a3d1d0ab035",
-        "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fstep3.png?alt=media&token=39192fd8-49f2-43d1-bdf2-6f012fdc0a8c",
-        "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fstep%204.png?alt=media&token=d3f2ca83-e386-4eb0-bdf7-7a79d2c672ef",
-        "https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fstep%205.png?alt=media&token=1e2be9cf-6183-4f90-b918-513a2c76bae7"
+        'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fdiscovery.png?alt=media&token=fee73921-90c0-4a8d-9515-2cfae7ac37c8',
+        'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fplanning.png?alt=media&token=ad1de6fa-35c6-4ce3-8d97-7d8691fdd16b',
+        'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fdevelopment.png?alt=media&token=ef6107ea-2663-40fa-bb74-d7d8d52fe149',
+        'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Ftesting.png?alt=media&token=29eeee79-b9cf-4275-8cb5-7021576c96f4',
+        'https://firebasestorage.googleapis.com/v0/b/nohara-591ab.appspot.com/o/steps%2Fdelivery.png?alt=media&token=8d66527d-71d4-4efa-a70c-f07e822ffe4b',
     ];
 
     const stepTitles = [
@@ -133,7 +133,7 @@ const SectionFour: React.FC = () => {
                                             layout="fill"
                                             alt={`Step ${step} Image`}
                                             quality={100}
-                                            unoptimized={true}
+                                            unoptimized={false}
                                         />
                                     )
                                 ))}

@@ -50,7 +50,7 @@ const pressStart2P = Press_Start_2P({
 
 const play = Play({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400"], 
   variable: "--font-play",
 });
 
@@ -74,6 +74,7 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pacifico.variable} ${londrina.variable} ${pressStart2P.variable} ${play.variable} ${openSans.variable} relative`}
