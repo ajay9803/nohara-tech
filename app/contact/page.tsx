@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
             defaults: { duration: 0.8, ease: "power3.out" },
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 80%", 
+                start: "top 80%",
                 toggleActions: "play none none none",
             },
         });
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
 
                     {/* 2nd div */}
                     <div className="ml-0 md:ml-6 w-full flex flex-col gap-x-3 lg:flex-row rounded-sm shadow-sm shadow-gray-500 lg:px-0 border border-solid border-black">
-                        <div className="flex-1 sm:w-full pl-8 pt-8 sm:flex flex-col sm:items-center lg:items-start">
+                        <div className="flex-1 sm:w-full pt-8 pb-8 sm:flex flex-col sm:items-center lg:items-start px-4">
                             <div className='relative mb-4'>
                                 <Image
                                     src={imageUrl}
@@ -77,11 +77,10 @@ const ContactForm: React.FC = () => {
                                     height={40}
                                     width={50}
                                     quality={100}
-                                    className="object-cover"
-                                    style={{ width: "40vh", height: "40vh" }}
+                                    className="object-cover w-full md:w-[40vh] h-[40vh]"
                                 />
                                 <div
-                                    className="w-[40vh] h-[10vh] py-2 absolute bottom-0"
+                                    className="w-full md:w-[40vh] h-[15vh] absolute bottom-0"
                                     style={{
                                         background: "linear-gradient(to bottom, transparent, white 100%)"
                                     }}
@@ -122,7 +121,7 @@ const ContactForm: React.FC = () => {
                                         <p className='text-[#6c6c6c] font-[700]'>Web Conferencing Details provided upon <br /> confirmation</p>
                                     </div>
                                 </div>
-                                <p className='font-open_sans text-[16px] tracking-wide leading-6 mb-4'>
+                                <p className='font-open_sans text-[16px] tracking-wide leading-6 mb-10'>
                                     Discuss your needs and opportunities.<br />
                                     Explore how Che IT&apos;s solutions can solve <br />
                                     your business tech tasks.

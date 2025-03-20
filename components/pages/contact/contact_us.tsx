@@ -143,7 +143,7 @@ const ContactUs: React.FC = () => {
 
                                 <div className="flex items-center gap-x-3">
                                     <div>
-                                        <p className="font-bold uppercase">Canada, Ottawa, 8004</p>
+                                        <p className="font-bold uppercase"> Canada, Ottawa </p>
                                         {/* <p>BAARERSTRASSE 139 6300 ZUG</p> */}
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@ const ContactUs: React.FC = () => {
 
                                 <div className="flex items-center gap-x-3">
                                     <div>
-                                        <p className="font-bold uppercase"> Nepal, Kathmandu, 1900</p>
+                                        <p className="font-bold uppercase"> Nepal, Kathmandu</p>
                                         {/* <p>Kyivs'ka St, 11, office 155</p> */}
                                     </div>
                                 </div>
