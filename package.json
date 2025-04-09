@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -20,17 +21,16 @@
     "countries-and-timezones": "^3.7.2",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
+    "firebase": "^9.23.0",
     "formik": "^2.4.6",
     "gsap": "^3.12.7",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",
     "react-dom": "^19.0.0",
-    "styled-components": "^6.1.15",
-    "yup": "^1.6.1",
     "react-toastify": "^11.0.5",
-    "firebase": "^9.23.0",
-    "@emailjs/browser": "^4.4.1"
+    "styled-components": "^6.1.15",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

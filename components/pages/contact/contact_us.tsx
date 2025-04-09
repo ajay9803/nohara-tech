@@ -1,9 +1,13 @@
+'use client'
+
 import { db } from "../../../app/firebaseConfig"
-import { useState} from 'react';
+import { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore"
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { useContext } from "react";
+// import { DateContext } from '../../../app/contact/page';
 
 
 const addDataToFireStore = async (name: string, email: string, message: string) => {
@@ -24,10 +28,13 @@ const addDataToFireStore = async (name: string, email: string, message: string) 
 
 const ContactUs: React.FC = () => {
 
+    // const selectedDate = useContext(DateContext) as string;
+
     const [userInput, setUserInput] = useState({
         name: "",
         email: "",
-        message: ""
+        message: "",
+        date: ""
     });
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -37,12 +44,14 @@ const ContactUs: React.FC = () => {
             setUserInput({
                 name: "",
                 email: "",
-                message: ""
+                message: "",
+                date: " "
+
             });
-            // toast.success("Hello coders it was easy!");
+            // toast.success("");
 
         } else {
-            // toast.error("Failed to store data in Firebase.");
+            toast.error("Failed to store data in Firebase.");
         }
 
         const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
@@ -56,12 +65,13 @@ const ContactUs: React.FC = () => {
                 name: userInput.name,
                 email: userInput.email,
                 message: userInput.message,
-                to_email: `manavkoirala08@gmail.com, braps1010@gmail.com`,
+                // date: selectedDate || "No date selected",
+                // to_email: manavkoirala08@gmail.com, braps1010@gmail.com,
             };
 
             // Send email using EmailJS
             const res = await emailjs.send(serviceID, templateID, emailParams, userID);
-            console.log("ahhahahahhahaha", emailParams)
+            console.log("Email sent successfully", emailParams)
             if (res.status === 200) {
                 toast.success("Message sent successfully!");
 
@@ -73,50 +83,6 @@ const ContactUs: React.FC = () => {
             toast.error("Failed to send message. Please try again later.");
         }
     };
-
-    //     if (!name || !email || !message) {
-    //       setError("All fields are required.");
-    //       return;
-    //     }
-
-    //     setError(""); // Clear any previous errors
-    //     setFormSubmitted(true); // Show loading state
-
-    //     // Save Data to Firestore
-    //     const added = await addDataToFireStore(name, email, message);
-    //     if (added) {
-    //       // Send Email
-    //       const params = { name, email, message };
-
-    //       try {
-    //         const response = await emailjs.send(
-    //           process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE!,
-    //           process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE!,
-    //           params,
-    //           process.env.NEXT_PUBLIC_EMAIL_JS_USER!
-    //         );
-
-    //         console.log("This is the response", response);  // Log the response
-
-    //         if (response.status === 200) {
-    //           alert("Message sent successfully!");
-    //         } else {
-    //           alert("Failed to send message. Please try again later.");
-    //         }
-    //       } catch (err) {
-    //         console.error("EmailJS Error:", err);
-    //         alert("Error sending message. Please contact support.");
-    //       }
-
-    //       // Reset Form
-    //       setName("");
-    //       setEmail("");
-    //       setMessage("");
-    //       setFormSubmitted(false);
-    //     } else {
-    //       setError("Failed to save data. Please try again.");
-    //     }
-    //   };
 
     return (
         <>
@@ -202,6 +168,7 @@ const ContactUs: React.FC = () => {
                                 className="w-full p-3 pl-5 bg-[#1F1F1F] text-white placeholder-gray-500 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 h-32"
                             />
 
+                            {/* <p>Date: {selectedDate}</p> */}
                             {/* Fake reCAPTCHA Box
                             <div className="flex items-center w-fit space-x-3 bg-black p-4 rounded-lg border border-slate-500">
                                 <div className='p-3 bg-black border-2 border-slate-400 hover:border-slate-700 transition-all duration-300'></div>
